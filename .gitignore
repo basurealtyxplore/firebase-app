@@ -1,5 +1,11 @@
 /node_modules
 /functions/node_modules
+
+#########################
+#Distribution/Productions
+#########################
+/dist
+
 ######################
 # Project Specific
 ######################
