@@ -1,0 +1,26 @@
+{
+  "name": "aiobee",
+  "version": "1.0.0",
+  "description": "Web development app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basavarajkh/aiobee.git"
+  },
+  "keywords": [
+    "Web",
+    "Development"
+  ],
+  "author": "Basavaraj Halasur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Basavarajkh/aiobee/issues"
+  },
+  "homepage": "https://github.com/Basavarajkh/aiobee#readme",
+  "dependencies": {
+    "firebase": "^4.1.3"
+  }
+}
