@@ -1,0 +1,7 @@
+.navbar{
+	background-color: #9c27b0;
+    color: #FFF;
+}
+.navbar.navbar-transparent{
+	background-color: transparent;
+}
