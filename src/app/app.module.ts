@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
 /* Components */
@@ -22,17 +23,33 @@ import { HomeProductsComponent } from './components/home-products/home-products.
 import { HomeServicesComponent } from './components/home-services/home-services.component';
 import { HomeContactComponent } from './components/home-contact/home-contact.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 /* Services */
 import { FirebaseService } from './services/firebase.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 /* App Routing */
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
-  { path:'about', component: AboutComponent }
+  { path:'about', component: AboutComponent },
+  { path:'contact', component: ContactComponent }
 ]
 
+/* Firebase configuration */
+export const firebaseConfig = {
+  production: false,
+  firebase:{
+    apiKey: "AIzaSyBED000V0fvARoL4wOGnrweO-BR7YmFYCo",
+    authDomain: "aiobee-b1390.firebaseapp.com",
+    databaseURL: "https://aiobee-b1390.firebaseio.com",
+    projectId: "aiobee-b1390",
+    storageBucket: "aiobee-b1390.appspot.com",
+    messagingSenderId: "104208339689"
+  }
+}
 
 /* Dependancy Injection */
 @NgModule({
@@ -45,10 +62,18 @@ const appRoutes: Routes = [
     HomeProductsComponent,
     HomeServicesComponent,
     HomeContactComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    ContactFormComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],

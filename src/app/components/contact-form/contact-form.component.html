@@ -1,0 +1,45 @@
+<!-- <form id="contact-form" (submit)="onSubmit()">    -->
+<form id="contact-form" #myForm="ngForm" (submit)="onSubmit(myForm)">
+  <div class="header header-raised header-primary text-center">
+    <h4 class="card-title">Contact Us</h4>
+  </div>
+  <div class="card-content">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group label-floating">
+          <label class="control-label">Your Name</label>
+          <input class="form-control" type="text" [(ngModel)]="name" name="name" required>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group label-floating">
+          <label class="control-label">Your Mobile Number</label>
+          <input class="form-control" type="number" [(ngModel)]="mobile" name="mobile" required>
+        </div>
+      </div>
+    </div>
+    <div class="form-group label-floating">
+      <label class="control-label">Your Email address</label>
+      <input class="form-control" type="email" [(ngModel)]="email" name="email" required>
+    </div>
+    <div class="form-group label-floating">
+      <label class="control-label">Your message</label>
+      <textarea class="form-control" [(ngModel)]="message" name="message" id="message" rows="6" required></textarea>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="optionsCheckboxes">
+            I'm not a robot
+          </label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <button type="submit" class="btn btn-primary pull-right">Send Message</button>
+      </div>
+    </div>
+    <flash-messages></flash-messages>
+  </div>
+</form>
