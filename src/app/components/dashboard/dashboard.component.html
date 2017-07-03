@@ -1,3 +1,7 @@
-<p>
-  dashboard works!
-</p>
+<div *ngFor="let school of schools">
+<h1>{{school.name}}</h1>
+<div [innerHTML]="school.extraCurricular"></div>
+  <div *ngFor="let image of school.images.split(',')">
+    <img src="{{image}}" alt="" width="450px" height="450px">
+  </div>
+</div>

@@ -1,6 +1,8 @@
 .navbar{
-	background-color: #9c27b0;
+		background-color: #000;
     color: #FFF;
+		opacity: 0.75;
+    filter: alpha(opacity=75);
 }
 .navbar.navbar-transparent{
 	background-color: transparent;

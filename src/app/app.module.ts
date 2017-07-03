@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 
+
 /* 3rd party Modules */
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -25,17 +26,19 @@ import { HomeContactComponent } from './components/home-contact/home-contact.com
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 /* Services */
 import { FirebaseService } from './services/firebase.service';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SchoolsService } from './services/schools.service';
 
 
 /* App Routing */
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path:'about', component: AboutComponent },
-  { path:'contact', component: ContactComponent }
+  { path:'contact', component: ContactComponent },
+  { path:'dashboard', component: DashboardComponent }
 ]
 
 /* Firebase configuration */
@@ -70,13 +73,14 @@ export const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AngularFireModule.initializeApp(firebaseConfig.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FlashMessagesModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SchoolsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

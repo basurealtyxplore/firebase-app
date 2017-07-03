@@ -1,6 +1,9 @@
 .carousel-caption{
-  bottom: 55vh;
+  top: 10vh;
+  width: 550px;
+  text-align: left;
 }
 .carousel .carousel-indicators{
 	bottom: 55px;
 }
+@media screen and max-width(768px) and min-width()
