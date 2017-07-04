@@ -14,6 +14,10 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 
 
+/* Services */
+import { FirebaseService } from './services/firebase.service';
+import { SchoolsService } from './services/schools.service';
+
 /* Components */
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -27,10 +31,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-
-/* Services */
-import { FirebaseService } from './services/firebase.service';
-import { SchoolsService } from './services/schools.service';
+import { ServicePageComponent } from './components/service-page/service-page.component';
 
 
 /* App Routing */
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path:'about', component: AboutComponent },
   { path:'contact', component: ContactComponent },
-  { path:'dashboard', component: DashboardComponent }
+  { path:'dashboard', component: DashboardComponent },
+  { path:'services', component: ServicePageComponent }
 ]
 
 /* Firebase configuration */
@@ -68,7 +70,8 @@ export const firebaseConfig = {
     AboutComponent,
     ContactComponent,
     ContactFormComponent,
-    DashboardComponent
+    DashboardComponent,
+    ServicePageComponent
   ],
   imports: [
     BrowserModule,
