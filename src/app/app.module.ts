@@ -32,6 +32,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ServicePageComponent } from './components/service-page/service-page.component';
+import { MeanStackComponent } from './components/service-page/sub-pages/mean-stack/mean-stack.component';
 
 
 /* App Routing */
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
   { path:'about', component: AboutComponent },
   { path:'contact', component: ContactComponent },
   { path:'dashboard', component: DashboardComponent },
-  { path:'services', component: ServicePageComponent }
+  { path:'services', component: ServicePageComponent },
+  { path:'services/mean', component: MeanStackComponent }
 ]
 
 /* Firebase configuration */
@@ -71,7 +73,8 @@ export const firebaseConfig = {
     ContactComponent,
     ContactFormComponent,
     DashboardComponent,
-    ServicePageComponent
+    ServicePageComponent,
+    MeanStackComponent
   ],
   imports: [
     BrowserModule,
