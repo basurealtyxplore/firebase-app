@@ -11,5 +11,20 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
+//   toggleState(){
+//       $('html').removeClass('nav-open');
+//       if ($('nav').hasClass('navbar-absolute')) {
+//           $('html').removeClass('nav-open-absolute')
+//       }
+//       materialKit.misc.navbar_menu_visible = 0;
+//       $('#bodyClick').remove();
+//       setTimeout(function() {
+//           $toggle.removeClass('toggled')
+//       }, 550)
+// }
 
+    // toggleState(event) {
+    //     event.target.classList.remove('nav-open');
+    //     //$(toggle) = event.target.classList(".navbar-toggle");
+    // }
 }

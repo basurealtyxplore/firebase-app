@@ -87,6 +87,6 @@ export const firebaseConfig = {
     RouterModule.forRoot(appRoutes)
   ],
   providers: [SchoolsService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, NavbarComponent, FooterComponent]
 })
 export class AppModule { }

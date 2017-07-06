@@ -1,9 +1,14 @@
 .navbar{
 		background-color: #000;
     color: #FFF;
-		opacity: 0.75;
-    filter: alpha(opacity=75);
+		opacity: 0.8;
+    filter: alpha(opacity=80);
 }
-.navbar.navbar-transparent{
+/*.navbar.navbar-transparent{
 	background-color: transparent;
+}*/
+@media screen and (max-width: 768px){
+	.mobi{
+		height: 100vh !important;
+	}
 }
