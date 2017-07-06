@@ -13,7 +13,56 @@
       <ul class="nav navbar-nav navbar-right">
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/']">Home</a></li>
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/about']">About</a></li>
-        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/services']">Services</a></li>
+        <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}" class="dropdown">
+          <a [routerLink]="['/services']" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+          <ul class="dropdown-menu dropdown-with-icons">
+							<li>
+								<a [routerLink]="['/services/branding']">
+									Brandings
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/mean']">
+									Mean Website / Application
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/cms']">
+									Content Management System
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/ecommerce']">
+									eCommerce / Online Shops
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/java']">
+									Enterprise Applications
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/xampp']">
+									Budget Applications
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/mobile']">
+									Mobile Apps
+								</a>
+							</li>
+							<li>
+								<a [routerLink]="['/services/cloud']">
+									Cloud Computing
+								</a>
+							</li>
+              <li>
+								<a [routerLink]="['/services/digital-marketing']">
+									Digital Marketing
+								</a>
+							</li>
+            </ul>
+        </li>
         <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/contact']">Contact</a></li>
       </ul>
     </div><!--/.nav-collapse -->
