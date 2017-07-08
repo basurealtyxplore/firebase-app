@@ -1,0 +1,26 @@
+<app-banner></app-banner>
+<div class="row">
+  <div class="main">
+    <div class="container">
+      <div class="row">
+        <div class="cd-section" id="teams">
+          <div class="team-1" id="team-1">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                  <h1 class="title">Welcome!</h1>
+                  <h2 class="text-danger">If you are an Admin hit the Login button</h2>
+                  <div>
+                    <span *ngIf="(user | async)?.uid == null">
+                      <a class="btn btn-large btn-danger" (click)="login()">Login</a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

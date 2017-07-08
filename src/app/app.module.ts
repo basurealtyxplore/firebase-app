@@ -42,6 +42,7 @@ import { MobileAppPageComponent } from './components/service-page/sub-pages/mobi
 import { CloudPageComponent } from './components/service-page/sub-pages/cloud-page/cloud-page.component';
 import { DigitalMarketingPageComponent } from './components/service-page/sub-pages/digital-marketing-page/digital-marketing-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 /* App Routing */
@@ -50,6 +51,7 @@ const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path:'about', component: AboutComponent },
   { path:'contact', component: ContactComponent },
+  { path: 'login', component: LoginComponent },
   { path:'dashboard', component: DashboardComponent },
   { path:'services', component: ServicePageComponent },
   { path:'services/mean', component: MeanStackComponent },
@@ -104,7 +106,8 @@ export const firebaseConfig = {
     MobileAppPageComponent,
     CloudPageComponent,
     DigitalMarketingPageComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
