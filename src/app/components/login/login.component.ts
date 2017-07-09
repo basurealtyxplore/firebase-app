@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-//import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Router } from '@angular/router';
@@ -30,14 +30,20 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    //var provider = new firebase.auth.GoogleAuthProvider();
 		this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-		this.router.navigate(['/dashboard']);
+    // firebase.auth().signInWithPopup(provider).then(function (){
+    //
+    // }).catch(function (err){
+    //   console.log("Sign in Error: "+ err);
+    // });
+    this.router.navigate(['/dashboard']);
+
 	}
   // login() {
   //   this.afAuth.auth.login();
 	// 	this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
 	// 	this.router.navigate(['/dashboard']);
 	// }
-
 
 }

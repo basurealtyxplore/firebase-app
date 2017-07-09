@@ -43,6 +43,9 @@ import { CloudPageComponent } from './components/service-page/sub-pages/cloud-pa
 import { DigitalMarketingPageComponent } from './components/service-page/sub-pages/digital-marketing-page/digital-marketing-page.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { LoginComponent } from './components/login/login.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { AddBlogComponent } from './components/blog/blog-components/add-blog/add-blog.component';
+import { ViewBlogComponent } from './components/blog/blog-components/view-blog/view-blog.component';
 
 
 /* App Routing */
@@ -63,6 +66,7 @@ const appRoutes: Routes = [
   { path:'services/mobile', component: MobileAppPageComponent },
   { path:'services/cloud', component: CloudPageComponent },
   { path:'services/digital-marketing', component: DigitalMarketingPageComponent },
+  { path:'blog', component: BlogComponent },
   { path:'page-not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: 'page-not-found' }
 
@@ -107,7 +111,10 @@ export const firebaseConfig = {
     CloudPageComponent,
     DigitalMarketingPageComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    BlogComponent,
+    AddBlogComponent,
+    ViewBlogComponent
   ],
   imports: [
     BrowserModule,

@@ -17,14 +17,16 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   user: Observable<firebase.User>
-  contacts:any;
+  contacts: any;
 
   constructor(
     private firebaseService: FirebaseService,
     public afAuth: AngularFireAuth,
     // public flashMessage: FlashMessagesService,
     private router: Router
-  ) { }
+  ) {
+    this.user = afAuth.authState;
+  }
 
   ngOnInit() {
     this.firebaseService.getContact().subscribe(contact => {
@@ -34,13 +36,16 @@ export class DashboardComponent implements OnInit {
 
 
   logout() {
-  this.afAuth.auth.signOut();
-  // this.flashMessage.show('You are logged out',
-  //   {
-  //     cssClass: 'alert-success',
-  //     timeout: 3000
-  //   });
-  this.router.navigate(['/']);
-}
+    this.afAuth.auth.signOut();
+    // this.flashMessage.show('You are logged out',
+    //   {
+    //     cssClass: 'alert-success',
+    //     timeout: 3000
+    //   });
+    this.router.navigate(['/']);
+  }
+  addNewBlog() {
+    this.router.navigate(['/blog']);
+  }
 
 }

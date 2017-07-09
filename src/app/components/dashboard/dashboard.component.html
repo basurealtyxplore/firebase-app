@@ -15,12 +15,16 @@
           <div class="team-1" id="team-1">
             <div class="container">
               <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-right">
+                <div class="col-md-6 text-left">
+                  <a class="btn btn-large btn-primary" *ngIf="(user | async)?.uid != null" (click)="addNewBlog()">Add new blog</a>
+                </div>
+                <div class="col-md-6 text-right">
                     <a class="btn btn-large btn-danger" (click)="logout()">Logout</a>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-8 col-md-offset-2 text-center">
+                <div class="col-md-12 text-center">
+                  <h2 class="text-center">Contacted People Details</h2>
                   <div class="table-responsive">
                     <table class="table">
                       <thead>
