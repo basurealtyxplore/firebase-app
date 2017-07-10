@@ -32,6 +32,7 @@ export class FirebaseService {
 
   addBlog(blog) {
     this.blogs.push(blog);
+
   }
   getBlog() {
     return this.blogs;
@@ -54,5 +55,5 @@ interface Blog {
   body?: string;
   categoryId?: string;
   categoryName: string;
-  dateTime: string;
+  createdDate: string;
 }

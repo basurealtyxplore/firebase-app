@@ -1,7 +1,10 @@
+<div *ngIf="blogs">
 <div class="row" *ngFor="let blog of blogs">
   <div class="col-md-12 text-left">
     <h1>{{blog.title}}</h1>
     <h3 class="text-primary">Category: {{blog.categoryName}}</h3>
     <p>{{blog.body}}</p>
+    <p *ngIf="blog.createdDate">{{blog.createdDate | date}}</p>
   </div>
+</div>
 </div>

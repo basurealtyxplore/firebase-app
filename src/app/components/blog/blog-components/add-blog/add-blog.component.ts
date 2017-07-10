@@ -11,14 +11,17 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 })
 export class AddBlogComponent implements OnInit {
 
+  private date;
   title:any;
   body:any;
   categoryName:any;
 
   constructor(
     private firebaseService: FirebaseService,
-    private flashMessage:FlashMessagesService
-  ) { }
+    private flashMessage:FlashMessagesService,
+  ) {
+    this.date = new Date();
+   }
 
   ngOnInit() {
   }
@@ -27,9 +30,11 @@ export class AddBlogComponent implements OnInit {
     let blog={
       title: this.title,
       body: this.body,
-      categoryName: this.categoryName
+      categoryName: this.categoryName,
+      createdDate: this.date.getTime()
     }
    this.firebaseService.addBlog(blog);
+   console.log(blog);
    myForm.reset();
    this.flashMessage.show("Thanks for adding a Blog...", { cssClass: 'alert-success', timeout: 5000 });
   }

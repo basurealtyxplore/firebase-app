@@ -22,7 +22,7 @@
                     <a class="btn btn-large btn-danger" (click)="logout()">Logout</a>
                 </div>
               </div>
-              <div class="row">
+              <div class="row" *ngIf="contacts">
                 <div class="col-md-12 text-center">
                   <h2 class="text-center">Contacted People Details</h2>
                   <div class="table-responsive">
